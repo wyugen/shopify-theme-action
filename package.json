@@ -1,0 +1,29 @@
+{
+  "name": "shopify-theme-action",
+  "version": "1.0.0",
+  "description": "Create deploy previews of commits in Pull Requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyugen/shopify-theme-action.git"
+  },
+  "keywords": [
+    "github",
+    "action"
+  ],
+  "author": "Darshan Baid (darshan@wyugen.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wyugen/shopify-theme-action/issues"
+  },
+  "homepage": "https://github.com/wyugen/shopify-theme-action#readme",
+  "dependencies": {
+    "@actions/artifact": "^0.3.5",
+    "@actions/core": "^1.2.5",
+    "axios": "^0.20.0",
+    "github-script": "github:actions/github-script"
+  }
+}

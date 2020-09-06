@@ -1,0 +1,24 @@
+name: 'Shopify Theme Deploy Previews'
+description: 'Create deploy previews of commits in Pull Requests'
+author: 'wyugen'
+inputs:
+  SHOPIFY_STORE:
+    description: 'The shopify development store (as store.myshopify.com)'
+    required: true
+  SHOPIFY_APP_PW:
+    description: 'The private app password used with themekit'
+    required: true
+  SHOPIFY_API_KEY:
+    description: 'API Key for private app'
+    required: true
+  github-token:
+    description: 'Authentication Token'
+    required: true
+outputs:
+  theme-id:
+    description: 'Deployed theme id'
+  deploy-url:
+    description: 'The time'
+runs: 
+  using: 'node12'
+  main: 'dist/index.js'
