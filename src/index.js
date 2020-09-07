@@ -118,7 +118,7 @@ const main = async () => {
   // Create new comment
   await createGitHubComment(
     prID,
-    `${commentIdentifier}🚀 Deployed successfully to ${URL}`
+    `${commentIdentifier}\n🚀 Deployed successfully to ${URL}`
   );
 };
 
