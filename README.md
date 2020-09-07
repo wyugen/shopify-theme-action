@@ -34,8 +34,13 @@ jobs:
 
 ## Required Input Parameters
 
-SHOPIFY_STORE: The shopify store URL where theme would be deployed, in format of `demo-store.myshopify.com`  
-SHOPIFY_APP_PW: The private app's password  
-SHOPIFY_API_KEY: The private app's API Key  
-github-token: GitHub token used to post comments (autofilled)  
+- SHOPIFY_STORE: The shopify store URL where theme would be deployed, in format of `demo-store.myshopify.com`  
+- SHOPIFY_APP_PW: The private app's password  
+- SHOPIFY_API_KEY: The private app's API Key  
+- github-token: GitHub token used to post comments (autofilled)  
 
+Because the theme ids are dynamically generated, the action does not honour config.yaml. To get these variables, refer [themekit documentation](https://shopify.github.io/themekit/)
+
+## Using with your build tools (or Slate)
+
+To use it with slate or another build tool, adding the build command after checkout would automatically ship the build version.
