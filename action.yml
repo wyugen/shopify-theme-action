@@ -1,6 +1,9 @@
 name: 'Shopify Theme Deploy Previews'
 description: 'Create deploy previews of commits in Pull Requests'
 author: 'wyugen'
+branding:
+  icon: 'anchor'
+  color: 'green'
 inputs:
   SHOPIFY_STORE:
     description: 'The shopify development store (as store.myshopify.com)'
