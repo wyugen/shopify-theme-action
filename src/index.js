@@ -1,8 +1,7 @@
 const core = require("@actions/core");
 const github = require("@actions/github");
 const axios = require("axios").default;
-const { execSync } = require("child_process");
-
+const exec = require("@actions/exec");
 const octokit = github.getOctokit(core.getInput("github-token"));
 const commentIdentifier =
   "<!-- Comment by Shopify Theme Deploy Previews Action -->";
@@ -85,7 +84,7 @@ const main = async () => {
 
   const prID = parsePullRequestId(process.env.GITHUB_REF);
 
-  execSync(
+  await exec.exec(
     "curl -s https://shopify.github.io/themekit/scripts/install.py | sudo python"
   );
 
@@ -94,12 +93,12 @@ const main = async () => {
 
   if (themeID === 0) {
     // Create a new theme
-    execSync(
+    await exec.exec(
       `theme new --password=${password} --store=${storeURL} --name='PR#${prID}'`
     );
     themeID = await getThemeID(BASE_URL, prID);
   } else {
-    execSync(
+    await exec.exec(
       `theme deploy --password=${password} --store=${storeURL} --themeid='${themeID}'`
     );
   }

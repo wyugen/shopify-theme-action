@@ -23,6 +23,7 @@
   "dependencies": {
     "@actions/artifact": "^0.3.5",
     "@actions/core": "^1.2.5",
+    "@actions/exec": "^1.0.4",
     "axios": "^0.20.0",
     "github-script": "github:actions/github-script"
   }
